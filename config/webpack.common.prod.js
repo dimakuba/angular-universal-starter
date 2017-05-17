@@ -19,7 +19,6 @@ const definePlugin = require('webpack/lib/DefinePlugin'),
 
 const ENV = process.env.ENV = process.env.NODE_ENV = 'production';
 const PORT = settings.port['server'];
-const API_URL = '/rest';
 
 /**
  * Webpack configuration

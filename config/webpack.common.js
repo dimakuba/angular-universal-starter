@@ -21,7 +21,7 @@ const definePlugin = require('webpack/lib/DefinePlugin'),
   CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const METADATA = {
-  title: 'Vakon Salon',
+  title: 'angular-universal-starter',
   baseUrl: '/'
 };
 

@@ -17,11 +17,6 @@ module.exports = {
   headTags: {
     link: [
       {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Lato:700,400,300',
-        '=href': false
-      },
-      {
         rel: 'shortcut icon',
         href: './assets/favicon.ico',
         type: 'image/x-icon',
