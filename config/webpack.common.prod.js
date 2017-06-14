@@ -56,8 +56,7 @@ const defaultConfig = {
         'ENV': JSON.stringify(ENV),
         'NODE_ENV': JSON.stringify(ENV),
         'HOST': JSON.stringify(settings.host),
-        'PORT': JSON.stringify(PORT),
-        'API_URL': JSON.stringify(API_URL),
+        'PORT': JSON.stringify(PORT)
       }
     }),
 

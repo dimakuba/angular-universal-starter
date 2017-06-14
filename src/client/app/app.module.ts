@@ -2,7 +2,8 @@ import {NgModule} from "@angular/core";
 import {HttpModule} from "@angular/http";
 import {FormsModule} from "@angular/forms";
 import {BrowserModule} from "@angular/platform-browser";
-import {TransferHttpModule} from "@nglibs/universal-transfer-state";
+import {HttpTransferModule} from "@ngx-universal/state-transfer";
+import {CacheModule} from "@ngx-cache/core";
 
 import {AppComponent} from "./app.component";
 import {AppState} from "./app.service";
@@ -12,7 +13,8 @@ import {AppState} from "./app.service";
         HttpModule,
         FormsModule,
         BrowserModule,
-        TransferHttpModule
+        HttpTransferModule,
+        CacheModule.forRoot()
     ],
     declarations: [
         AppComponent
