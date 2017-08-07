@@ -204,7 +204,11 @@ const serverConfig = {
        */
       {
         test: /\.ts$/,
-        use: '@ngtools/webpack',
+        use: [
+            `ng-router-loader`,
+            'awesome-typescript-loader?declaration=false',
+            'angular2-template-loader'
+        ],
         exclude: [/\.(spec|e2e)\.ts$/]
       },
 
@@ -281,9 +285,7 @@ const browserConfig = function (options) {
          */
         {
           test: /\.ts$/,
-          use: isProd
-            ? '@ngtools/webpack'
-            : [
+          use: [
               `ng-router-loader`,
               'awesome-typescript-loader?declaration=false',
               'angular2-template-loader'

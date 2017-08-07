@@ -97,8 +97,8 @@
         "@angularclass/bootloader"
       ],
       "vendor": [
-        "@nglibs/universal-express-engine",
-        "@nglibs/universal-transfer-state"
+        "@ngx-universal/express-engine",
+        "@ngx-universal/state-transfer"
       ]
     }
   }

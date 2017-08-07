@@ -31,10 +31,10 @@
     "@ngx-cache/platform-browser": "^0.4.0-beta.1",
     "@ngx-cache/platform-server": "^0.4.0-beta.1",
     "@ngx-config/core": "^0.2.0-rc.5",
-    "@ngx-universal/express-engine": "0.4.0-beta.1",
-    "@ngx-universal/state-transfer": "0.4.0-beta.1",
     "@ngx-translate/core": "^6.0.1",
     "@ngx-translate/http-loader": "^0.0.3",
+    "@ngx-universal/express-engine": "0.4.0-beta.1",
+    "@ngx-universal/state-transfer": "0.4.0-beta.1",
     "ansi-html": "0.0.7",
     "body-parser": "^1.15.0",
     "compression": "^1.6.2",
@@ -47,6 +47,7 @@
     "morgan": "^1.7.0",
     "rxjs": "^5.2.0",
     "sockjs-client": "^1.1.2",
+    "webpack-dev-server": "^2.6.1",
     "zone.js": "~0.8.10"
   },
   "devDependencies": {
