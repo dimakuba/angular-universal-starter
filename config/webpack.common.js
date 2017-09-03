@@ -402,18 +402,6 @@ const browserConfig = function (options) {
       new htmlWebpackPlugin({
         inject: 'head',
         template: $$.root(`${settings.paths.src.client.root}/index.html`),
-        chunksSortMode: function (chunk1, chunk2) {
-          const orders = ['app', 'twbs', 'vendor'].reverse();
-          const order1 = orders.indexOf(chunk1.names[0]);
-          const order2 = orders.indexOf(chunk2.names[0]);
-          if (order1 > order2) {
-            return 1;
-          } else if (order1 < order2) {
-            return -1;
-          } else {
-            return 0;
-          }
-        },
         title: METADATA.title,
         metadata: METADATA,
       }),
