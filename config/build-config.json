@@ -37,25 +37,6 @@
     "NODE_MODULES": "{{root}}/node_modules"
   },
   "plugins": {
-    "pluginloader": {
-      "pattern": [
-        "gulp-*",
-        "async",
-        "rimraf",
-        "webpack",
-        "postcss-*",
-        "autoprefixer",
-        "colorguard",
-        "stylefmt"
-      ],
-      "rename": {
-        "postcss-scss": "scss",
-        "postcss-reporter": "reporter"
-      }
-    },
-    "debugger": {
-      "title": ""
-    },
     "autoprefixer": {
       "browsers": [
         "last 2 versions",
