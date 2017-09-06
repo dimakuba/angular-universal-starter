@@ -90,6 +90,10 @@
     magic-string "^0.22.3"
     source-map "^0.5.6"
 
+"@nguniversal/express-engine@^1.0.0-beta.3":
+  version "1.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-1.0.0-beta.3.tgz#b06dd5ece6c6882db5e29ec4ed91f65792c63a4e"
+
 "@ngx-cache/core@^0.4.0-beta.2":
   version "0.4.0-beta.2"
   resolved "https://registry.yarnpkg.com/@ngx-cache/core/-/core-0.4.0-beta.2.tgz#94a3a504ea3d2e52a2fe48e90ec7853dcc316dea"
@@ -172,6 +176,10 @@
 "@types/node@^6.0.46":
   version "6.0.85"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.85.tgz#ec02bfe54a61044f2be44f13b389c6a0e8ee05ae"
+
+"@types/node@^7.0.13":
+  version "7.0.43"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.43.tgz#a187e08495a075f200ca946079c914e1a5fe962c"
 
 "@types/node@^8.0.26":
   version "8.0.26"
