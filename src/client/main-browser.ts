@@ -1,20 +1,20 @@
 // polyfills
 import 'zone.js/dist/zone';
 import 'reflect-metadata';
-import 'rxjs/Observable';
-import 'rxjs/add/operator/map';
 
 // angular
+import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 // libs
 import { bootloader } from '@angularclass/bootloader';
 
 // app
-import { AppBrowserModule } from './app/app.browser.module';
+import { AppBrowserModuleNgFactory } from './app/app.browser.module.ngfactory';
 
 export function main(): any {
-  return platformBrowserDynamic().bootstrapModule(AppBrowserModule);
+    return platformBrowserDynamic().bootstrapModuleFactory(AppBrowserModuleNgFactory);
 }
 
+enableProdMode();
 bootloader(main);

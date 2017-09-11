@@ -11,7 +11,6 @@ settings = $$.loadSettings(settings);
 const definePlugin = require('webpack/lib/DefinePlugin'),
   checkerPlugin = require('awesome-typescript-loader').CheckerPlugin,
   aotPlugin = require('@ngtools/webpack').AotPlugin,
-  contextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin'),
   loaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin'),
   assetsPlugin = require('assets-webpack-plugin'),
   htmlWebpackPlugin = require('html-webpack-plugin'),
@@ -111,19 +110,6 @@ const defaultConfig = function (options) {
        * See: https://github.com/s-panferov/awesome-typescript-loader#forkchecker-boolean-defaultfalse
        */
       new checkerPlugin(),
-
-      /**
-       * Plugin: ContextReplacementPlugin
-       * Description: Provides context to Angular's use of System.import
-       *
-       * See: https://webpack.github.io/docs/list-of-plugins.html#contextreplacementplugin
-       * See: https://github.com/angular/angular/issues/11580
-       */
-      new contextReplacementPlugin(
-        // fix the warning in ./~/@angular/core/src/linker/system_js_ng_module_factory_loader.js
-        /angular(\\|\/)core(\\|\/)@angular/,
-        $$.root(settings.paths.src.client.root)
-      ),
 
       /**
        * Plugin LoaderOptionsPlugin (experimental)
@@ -264,7 +250,7 @@ const serverConfig = {
 };
 
 const browserConfig = function (options) {
-  const isProd = options.env === 'production';
+  const isProd = options.env === 'prod' || options.env === 'production';
 
   return {
     target: 'web',
@@ -277,16 +263,19 @@ const browserConfig = function (options) {
     module: {
       rules: [
         /**
-         * Typescript loader support for .ts and Angular async routes via .async.ts
-         * Replace templateUrl and stylesUrl with require()
+         * @ngtools/webpack, ng-router-loader, awesome-typescript-loader and angular2-template-loader for *.ts
          *
+         * See: https://github.com/angular/angular-cli
+         * See: https://github.com/shlomiassaf/ng-router-loader
          * See: https://github.com/s-panferov/awesome-typescript-loader
          * See: https://github.com/TheLarkInn/angular2-template-loader
          */
         {
           test: /\.ts$/,
-          use: [
-              `ng-router-loader`,
+          use: isProd
+            ? '@ngtools/webpack'
+            : [
+              'ng-router-loader',
               'awesome-typescript-loader?declaration=false',
               'angular2-template-loader'
             ],
