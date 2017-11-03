@@ -3,6 +3,9 @@
 ## Installing
 
 ```
+# clone the repo
+git clone https://github.com/HVND/angular-universal-starter
+
 # change directory to the repo
 cd angular-universal-starter
 
