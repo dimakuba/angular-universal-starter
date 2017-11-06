@@ -15,7 +15,7 @@ npm install
 # start the server (SPA / lean Angular)
 npm start
 
-# prod build (Universal)
+# prod build (Angular Universal)
 npm run build:prod
 
 # start the server (Angular Universal)
